@@ -1,7 +1,7 @@
 <template>
   <v-container fluid grid-list-md fill-height>
     <v-layout row wrap>
-      <v-flex d-flex xs8>
+      <v-flex d-flex xs12>
         <v-layout row wrap column>
           <v-flex class="pattern-container">
             <expression-editor />
@@ -11,7 +11,7 @@
           </v-flex>
         </v-layout>
       </v-flex>
-      <v-flex xs4>
+      <!-- <v-flex xs4>
         <v-expansion-panel popout>
           <v-expansion-panel-content v-for="(item,i) in 5" :key="i">
             <div slot="header">Item</div>
@@ -20,7 +20,7 @@
             </v-card>
           </v-expansion-panel-content>
         </v-expansion-panel>
-      </v-flex>
+      </v-flex> -->
     </v-layout>
   </v-container>
 </template>

@@ -1,28 +1,11 @@
 <template>
-  <div :class="wrapCls">
-    <div class="text-editor-container">
-      <canvas
-        class="text-canvas"
-        width="1"
-        height="1"
-        ref="textCanvas"
-      />
-      <div
-        class="text-measure"
-        ref="textMeasure"
-      >
-        <codemirror
-          class="text-editor"
-          ref="cmEditor"
-          :value="value"
-          :options="cmOptions"
-          @scroll="onCmScroll"
-          @input="onCmChange"
-          @focus="onCmFocus"
-          @blur="onCmBlur"
-        />
+  <div class="text-wrap">
+    <div :class="wrapCls">
+      <canvas class="text-canvas" width="1" height="1" ref="textCanvas" />
+      <div class="text-measure" ref="textMeasure">
+        <codemirror class="text-editor" ref="cmEditor" :value="value" :options="cmOptions" @scroll="onCmScroll" @input="onCmChange" @focus="onCmFocus" @blur="onCmBlur" />
+      </div>
     </div>
-  </div>
   </div>
 </template>
 
@@ -59,7 +42,7 @@ export default {
       return this.$refs.cmEditor.codemirror;
     },
     wrapCls() {
-      return !this.focus ? 'text-wrap' : 'text-wrap focus';
+      return !this.focus ? 'text-editor-container' : 'text-editor-container focus';
     },
     ...mapGetters({
       value: 'textValue',
@@ -269,11 +252,6 @@ export default {
   width: calc(100% - 8px);
 }
 
-.text-wrap.focus {
-  border-color: #457abb;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 5px rgba(69, 122, 187, 0.5);
-}
-
 .text-editor-container {
   width: 100%;
   height: 100%;
@@ -282,13 +260,18 @@ export default {
   border-radius: 3px;
 }
 
+.text-editor-container.focus {
+  border-color: #457abb;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 5px rgba(69, 122, 187, 0.5);
+}
 .text-canvas {
   position: absolute;
-  background: #f4f4f5;
+  /* background: #f4f4f5; */
 }
 
 .text-measure {
   height: 100%;
+  cursor: text;
 }
 
 .text-editor {

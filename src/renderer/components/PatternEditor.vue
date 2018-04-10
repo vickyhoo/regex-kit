@@ -5,6 +5,8 @@
     :value="value"
     :options="cmOptions"
     @input="onCmChange"
+    @focus="onCmFocus"
+    @blur="onCmBlur"
   />
 </template>
 
@@ -59,7 +61,13 @@ export default {
 
       this.expressionHighlighter.draw(parsed.tree);
       this.expressionHover.token = parsed.token;
-    }
+    },
+    onCmFocus() {
+      this.$emit('focus');
+    },
+    onCmBlur() {
+      this.$emit('blur');
+    },
   }
 };
 </script>
