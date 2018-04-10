@@ -10,7 +10,7 @@
       <v-footer fixed app>
         <v-layout row wrap justify-center>
           <v-flex xs12 py-3 text-xs-center white--text>
-            <v-btn flat small @click="open('https://www.github.com')">Github</v-btn>
+            <v-btn flat small @click="open('https://github.com/vickyhoo/regex-kit')">Github</v-btn>
             <v-btn flat icon small @click="changeTheme" class="right">
               <v-icon small>invert_colors</v-icon>
             </v-btn>
