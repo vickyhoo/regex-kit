@@ -1,0 +1,17 @@
+.regexr-menu {
+  a {
+    @extend %user-select-none;
+    text-decoration: none;
+    color: $theme-color;
+    cursor: pointer;
+
+    &:hover {
+      color: $hover-color;
+      text-decoration: none;
+    }
+
+    code {
+      color: $hover-color;
+    }
+  }
+}
