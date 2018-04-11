@@ -4,6 +4,8 @@
 
 > regular expression tool
 
+<img src="static/app.png">
+
 #### Build Setup
 
 ``` bash
