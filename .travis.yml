@@ -35,17 +35,6 @@ script:
 branches:
   only:
   - master
-before_deploy:
-- mkdir $TRAVIS_BUILD_DIR/release
-- cp $TRAVIS_BUILD_DIR/build/*.zip $TRAVIS_BUILD_DIR/release/
-- cp $TRAVIS_BUILD_DIR/build/*.dmg $TRAVIS_BUILD_DIR/release/
-deploy:
-  provider: releases
-  file_glob: true
-  file: release/*
-  skip_cleanup: true
-  on:
-    branch: master
-    tags: true
-  api_key:
-    secure: Mm6dACoV9REqenDLqnK+HnEEGa+LDYpoT3GWLgMVSoKuII79a9nERDZNXN2qofBABmQHqicTGfjZfdBjK3lqmi7yQoEwuJVlWTdfuG6CHu0PBKPUXeEtjb3guYeimRXkq3OCxgI/Qx8yoR6eEutYVO5VPCzTiB9oT55SOGWYIvkkuDI6/abf+VYCxDPvix7f0ka+h92mXXEmYQoP8DWzFehPrqeRiORIIWiK1ibNPbc7c4Y4zkM654HNRnrxbm44dDRwJmo4G7uG3rod+bPubIBK/4DoO4dCyMWgjPwmEkplRl70iG/tR10xIAaKBsSUXS0NtTLd8xfURfBHb5kCXt1wWZd7mKPfQSUGNutJZvjZrFjvd6bNpKkQRlvOeH4F1vNbK7ugn4OMjBtaAJq642Zypuq22NjevfgefwcZGv90MTYoBANiF27HftEbYaxLXAgpJmj9OW1YU3+UF/GIVylAJAdm7c+EVvfgsJH1VkpfTfdXRXjACubaTRhrYUt5REXSQo2rgX0Q90sjnEsEbTClQiQkEsEsv1UAV9r8gKVdiixu9AenFLjan9LRw3Z4egD/Dsd4zdfUDNnRtQ7ohv9ZZzctKQakjos4FOeO6jL1dydfA5AuFkfml8RRrkC9c4i2R81mkd4v3IXFtAintaw+317HILti/gKEeMDQPF0=
+env:
+  global:
+    secure: YCQoaRkxisbd/jOa5UoROq7XioIyq4F/7AfuiaElG6mHyScKmM+TO3Hdr3jUyImRoqbzHXvj0Lcuelwph7FNQ+ffowxzuq/1MWSxzdQ9ubkkEis++5IlulLPuh/PYRxM75cvt+b8ZoEunTT9a3rzmQ0v133V6S1NLpFyhkU+0eptNW6/mMzrmN5qLSOsUqddP96Uhfpy7MVrXctuomfuXYCVCSeoaju6Oaw7x73iBfKuqY7ABhzkwKkH8FzXqudEr9G3whEBExSHIGAMy+Y6/FPZMjIrG7SNojA2CDblOS2+lcTP66xUuyiCuAuciqD55qOYQ5yPSAb5YRnwKRom9q29MtwwLn3KuR1xujxC3fhunCF3TzdUbVpa59W2weYXN5y4VHH0dzuLqdoDh/hNlgwCBpVW8mSpeIXtATE4VoYhCIgOsJXjccaygh6LUVRhR2cF/5wRpIsfa+rOvVDFWfWvpYOG8blMYnhsngK73J4EsllU0THfDdzj3vbqDRG6ignLBGUzc9dRDbX3bhLLO+ddNv0c3Be91HcRSeCS4zQV338KCxOi+oY55CQxUevPkwkQnQD/5I9BKiKR9iHPXM47bvgP9YGFfy+7msSlOYqnPwbFlua4hO0D4GoRkPu/70/6lRDriee4BPXZ4X2fTzTEZHJN7hEa5+Ib9d36hLE=
