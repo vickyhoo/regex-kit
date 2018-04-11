@@ -1,5 +1,7 @@
 # regex-kit
 
+[![Build Status](https://travis-ci.org/vickyhoo/regex-kit.svg?branch=master)](https://travis-ci.org/vickyhoo/regex-kit)
+
 > regular expression tool
 
 #### Build Setup
