@@ -31,7 +31,7 @@ install:
 - npm install -g xvfb-maybe
 - yarn
 script:
-- yarn run release
+- yarn run build
 branches:
   only:
   - master

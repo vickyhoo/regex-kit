@@ -2,6 +2,10 @@
 # https://simulatedgreg.gitbooks.io/electron-vue/content/en/testing.html#on-the-subject-of-ci-testing
 version: 0.1.{build}
 
+environment:
+  my_variable:
+    secure: SOjDaRFmCm2jxo/61Uz3dB9UtoOEUsOQEWRr5m6KWDtvmwgPbOwfsLfnBu1Fx+rhe8GxD8maMDsQuBxQ5QYkPA==
+
 branches:
   only:
     - master
@@ -28,6 +32,6 @@ install:
 
 build_script:
   #- yarn test
-  - yarn build
+  - yarn run build
 
 test: off
