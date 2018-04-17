@@ -6,6 +6,9 @@
 
 <img src="static/app.png" width="500">
 
+#### Downloads
+[v0.1.1](https://github.com/vickyhoo/regex-kit/releases/tag/v0.1.1)
+
 #### Build Setup
 
 ``` bash
