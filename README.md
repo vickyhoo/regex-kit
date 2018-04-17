@@ -4,7 +4,7 @@
 
 > regular expression tool
 
-<img src="static/app.png">
+<img src="static/app.png" width="500">
 
 #### Build Setup
 
