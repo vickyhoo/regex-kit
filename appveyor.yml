@@ -28,6 +28,6 @@ install:
 
 build_script:
   #- yarn test
-  - yarn run build
+  - yarn run release
 
 test: off
